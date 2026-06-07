@@ -1,17 +1,54 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+
+  {
+    rules: {
+      // ;
+      semi: ['error', 'always'],
+
+      // ''
+      quotes: ['error', 'single', { avoidEscape: true }],
+
+      // `Hello ${name}`
+      'prefer-template': 'error',
+
+      // () => {}
+      'prefer-arrow-callback': 'error',
+
+      // одинаковые return
+      'consistent-return': 'error',
+
+      // import type
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+        },
+      ],
+
+      // пустые интерфейсы
+      '@typescript-eslint/no-empty-interface': 'error',
+
+      // явный тип возврата
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        {
+          allowExpressions: true,
+        },
+      ],
+    },
+  },
+
   globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
   ]),
 ]);
 
