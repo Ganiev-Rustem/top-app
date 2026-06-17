@@ -1,15 +1,17 @@
-import { Button, Htag, P, Tag } from '@/components';
+'use client';
+import { Button, Htag, P, Tag, Rating } from '@/components';
+import { useState } from 'react';
 import type { JSX } from 'react/jsx-runtime';
 
 
 export default function Home(): JSX.Element {
-
+	const [rating, setRating] =useState<number>(0);
 
 	return (
 		<div>
-			<Htag tag='h1'>Текст</Htag>
-			<Button appereance='primary' arrow='right'>Текст</Button>
-			<Button appereance='ghost' arrow='down'>Текст</Button>
+			<Htag tag='h1'>123</Htag>
+			<Button appereance='primary' arrow='right' >+1</Button>
+			<Button appereance='ghost' arrow='down' >-1</Button>
 			<P size='l'>Текст1</P>
 			<P size='m'>Текст2</P>
 			<P size='s'>Текст3</P>
@@ -21,6 +23,7 @@ export default function Home(): JSX.Element {
 			<Tag color='primary'>primary</Tag>
 			<Tag color='red'>red</Tag>
 			<Tag color='green'>green</Tag>
+			<Rating rating={rating} isEditable setRating={setRating}/>
 		</div>
 	);
 }

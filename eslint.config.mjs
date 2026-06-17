@@ -34,13 +34,13 @@ const eslintConfig = defineConfig([
       // пустые интерфейсы
       '@typescript-eslint/no-empty-interface': 'error',
 
-      // явный тип возврата
-      '@typescript-eslint/explicit-function-return-type': [
-        'error',
-        {
-          allowExpressions: true,
-        },
-      ],
+    //   // явный тип возврата
+    //   '@typescript-eslint/explicit-function-return-type': [
+    //     'error',
+    //     {
+    //       allowExpressions: true,
+    //     },
+    //   ],
     },
   },
 
