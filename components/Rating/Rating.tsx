@@ -16,6 +16,7 @@ export const Rating = ({ isEditable=false, rating, setRating, ...props}:RatingPr
 	useEffect(()=> {
 		// eslint-disable-next-line react-hooks/immutability
 		constructRating(rating);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[rating]);
 
 
