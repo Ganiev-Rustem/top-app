@@ -1,0 +1,12 @@
+.filled {
+	fill: var(--primary-color);
+}
+.star_span {
+	padding-right: 5px;
+}
+.star {
+	display: inline-block;
+}
+.editable {
+	cursor: pointer;
+}

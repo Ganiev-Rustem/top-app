@@ -1,5 +1,5 @@
 'use client';
-import { Button, Htag, P, Tag, Rating } from '@/components';
+import { Button, Htag, P, Tag, Rating, Rating2 } from '@/components';
 import { useState } from 'react';
 import type { JSX } from 'react/jsx-runtime';
 
@@ -9,6 +9,7 @@ export default function Home(): JSX.Element {
 
 	return (
 		<div>
+			главная
 			<Htag tag='h1'>123</Htag>
 			<Button appereance='primary' arrow='right' >+1</Button>
 			<Button appereance='ghost' arrow='down' >-1</Button>
@@ -24,6 +25,7 @@ export default function Home(): JSX.Element {
 			<Tag color='red'>red</Tag>
 			<Tag color='green'>green</Tag>
 			<Rating rating={rating} isEditable setRating={setRating}/>
+			<Rating2 rating={4} isEditable/>
 		</div>
 	);
 }
