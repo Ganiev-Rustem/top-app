@@ -1,13 +1,15 @@
- 
-import type { JSX } from 'react/jsx-runtime';
+
+import { getMenu } from '@/api/menu';
 
 
-export default function Home(): JSX.Element {
-	
+export default async function Home() {
+	const menu = await getMenu(0);
 	return (
 		<div>
 			главная
-
+			<div>{JSON.stringify(menu)}</div>
+			<div>{menu.length}</div>
+			
 		</div>
 	);
 }

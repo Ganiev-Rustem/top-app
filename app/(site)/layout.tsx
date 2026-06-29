@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import './globals.css';
 import type { JSX } from 'react/jsx-runtime';
-import styles from './page.module.css';
+import styles from './layout.module.css';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Sidebar } from './components/Sidebar/Sidebar';
