@@ -22,16 +22,9 @@
 }
 .footer {
 	grid-area: footer;
-	background-color: var(--primary-color);
-	display: grid;
-	min-height: 72px;
-	align-content: center;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 40px;
+
 }
-.agree {
-	justify-self: flex-end;
-}
+
 
 @media (max-width:765px) {
 	.wrapper {
@@ -48,7 +41,5 @@
 	.header {
 		display: block;
 	}
-	.footer {
-		grid-template-columns: 1fr;
-	}
+
 }
